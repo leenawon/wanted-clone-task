@@ -1,0 +1,276 @@
+/* Global Navigation Bar Container */
+.gnb-container {
+  width: 100%;
+  box-shadow: 0 1px 0 0 rgb(0 0 0 / 10%);
+}
+
+/* Global Navigation Bar Wrapper */
+.gnb-wrapper {
+  width: 90%;
+  height: 50px;
+  margin: 0 auto;
+  max-width: 1060px;
+}
+
+/* Common Flex Style */
+.global-nav-bar,
+.menu-and-logo,
+.menu-list,
+.button-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Global Navigation Bar */
+.global-nav-bar {
+  justify-content: space-between;
+}
+
+/* Menu And Logo */
+.menu-and-logo .menu-button {
+  margin-right: 15px;
+}
+
+.menu-and-logo .menu-image {
+  width: 17px;
+  height: 14px;
+}
+
+.menu-and-logo .logo {
+  font-weight: 900;
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+/* Menu List */
+.menu-list {
+  height: 50px;
+}
+
+.menu-list li {
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  height: inherit;
+  color: #333;
+}
+
+.menu-list .community-badge,
+.menu-list .ai-predict-badge {
+  font-size: 7px;
+  position: relative;
+  top: -10px;
+  left: 1px;
+  color: rgb(51, 102, 255);
+  font-weight: 400;
+}
+
+/* Button List */
+.button-list {
+  padding: 9px 0;
+}
+
+.button-list li {
+  padding: 0 10px;
+}
+
+.button-list li:last-child {
+  padding: 0;
+}
+
+.button-list li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-list li i {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Button List Notice & Profile */
+.button-list li .notice-button,
+.button-list li .profile-image-button {
+  position: relative;
+}
+
+.button-list li .profile-image-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+}
+
+.button-list li .profile-image-button img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+/* New Badge */
+.new-badge {
+  background-color: rgb(51, 102, 255);
+  width: 13px;
+  height: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 5px;
+  font-weight: 600;
+  position: absolute;
+}
+
+.new-badge.notice-badge {
+  top: -8px;
+  left: 12px;
+}
+
+.new-badge.profile-badge {
+  top: -3px;
+  left: 19px;
+}
+
+/* Business Service Button */
+.button-list li .business-button {
+  font-size: 13px;
+  color: #666;
+  height: 30px;
+  border: 1px solid #e1e2e3;
+  border-radius: 15px;
+  padding: 0 10px;
+  margin-left: 15px;
+  font-weight: 400;
+}
+
+.button-list li:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-list li:last-child:before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: #e1e2e3;
+  margin: auto 10px;
+}
+
+/* Hide Menu (display none) */
+.hide-menu {
+  display: none;
+}
+
+/* Responsive Media Query */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .button-list li {
+    padding: 0 5px;
+  }
+
+  .button-list .notice-button {
+    margin-right: 5px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+  .menu-list {
+    justify-content: space-evenly;
+    flex: 1 1;
+  }
+
+  .menu-list li {
+    padding: 15px 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .gnb-wrapper {
+    height: 110px;
+  }
+
+  .menu-and-logo {
+    width: 100%;
+    height: 60px;
+    padding: 15px 0;
+  }
+
+  .menu-list li {
+    padding: 11px 10px 19px;
+    font-size: 13px;
+  }
+
+  .medium-hide {
+    display: none !important;
+  }
+
+  .visible-menu {
+    display: inline-block;
+  }
+
+  .button-list li:last-child:before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gnb-wrapper {
+    width: 100%;
+    height: 110px;
+  }
+
+  .menu-and-logo {
+    height: 60px;
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .menu-list li {
+    padding: 11px 10px 19px;
+  }
+
+  .menu-list li:first-child {
+    padding-left: 20px;
+  }
+
+  .visible-menu,
+  .visible-home {
+    display: inline-block;
+  }
+
+  .visible-menu {
+    margin-right: 10px;
+  }
+
+  .visible-home {
+    box-shadow: inset 0 -2px #258bf7;
+  }
+
+  .small-hide {
+    display: none;
+  }
+
+  .medium-hide {
+    display: none !important;
+  }
+
+  .button-list li:last-child:before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu-list li {
+    font-size: 13px;
+    padding: 15px 8px;
+  }
+
+  .visible-home {
+    padding: 15px 8px 15px 20px;
+  }
+}
