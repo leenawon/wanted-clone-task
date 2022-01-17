@@ -73,6 +73,12 @@
 
 .button-list li {
   padding: 0 10px;
+  height: 100%;
+}
+
+.button-list li > * {
+  font-size: 14px;
+  height: 100%;
 }
 
 .button-list li:last-child {
@@ -85,8 +91,7 @@
   align-items: center;
 }
 
-.button-list li i {
-  font-size: 18px;
+.button-list li svg {
   color: #666;
 }
 
