@@ -1,0 +1,230 @@
+/* Carousel Container */
+.carousel-container {
+  padding-top: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Wrapper */
+.carousel-wrapper {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel */
+.carousel {
+  height: inherit;
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+/* Carousel Track */
+.carousel .carousel-track {
+  height: inherit;
+  opacity: 1;
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: all 500ms ease 0s;
+}
+
+/* Track Container */
+.carousel-track .track-container {
+  width: 1060px;
+  display: block;
+  float: left;
+  height: 100%;
+  position: relative;
+}
+
+/* Track Wrapper */
+.track-container .track-wrapper {
+  width: 100%;
+  display: inline-block;
+}
+
+.track-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  display: inline-block;
+}
+
+/* Track Info */
+.track-wrapper .track-info {
+  width: 100%;
+  height: 78px;
+  text-align: center;
+}
+
+.hide-info {
+  opacity: 0;
+}
+
+.track-info h2 {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: #333;
+  width: "auto";
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.track-info h3 {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #666;
+  width: "auto";
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.track-info hr {
+  display: none;
+}
+
+.track-info > span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #36f;
+  height: 40px;
+  padding: 6px 8px;
+  min-width: 64px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.track-info > span > span {
+  margin-top: -2px;
+  margin-right: -1px;
+  margin-left: 2px;
+}
+
+/* Carousel Arrow */
+.carousel-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 120px;
+  width: 30px;
+  height: 60px;
+  opacity: 0.5;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.carousel-arrow.carousel-right-arrow {
+  right: calc((100% - 1200px) / 2);
+}
+
+.carousel-arrow.carousel-left-arrow {
+  left: calc((100% - 1200px) / 2);
+}
+
+.carousel-arrow svg {
+  width: 1em;
+  height: 1em;
+}
+
+/* Responsive Media Query */
+@media screen and (min-width: 1200px) {
+  .carousel-container {
+    height: auto;
+  }
+
+  .carousel {
+    padding: 0 40px;
+  }
+
+  .carousel-track .track-container {
+    padding: 0 12px;
+    box-sizing: content-box;
+  }
+
+  .track-wrapper .track-info {
+    width: 330px;
+    position: absolute;
+    bottom: 28px;
+    height: 146px;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: 1;
+    text-align: left;
+    left: 34px;
+  }
+
+  .track-info h2 {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .track-info h3 {
+    margin: 0 20px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 1.64;
+    color: #333;
+  }
+
+  .track-info hr {
+    display: block;
+    margin: 0;
+    height: 1px;
+    background-color: #ececec;
+    border: none;
+  }
+
+  .track-info > span {
+    margin: 6px 0 0 13px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .carousel {
+    padding: 0 40px;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  .track-image {
+    width: inherit;
+    height: 183px;
+    border-radius: 3px 3px 0 0;
+  }
+
+  .track-info {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .carousel-wrapper {
+    height: 373px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .carousel-wrapper {
+    height: 290px;
+  }
+}
