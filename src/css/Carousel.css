@@ -112,6 +112,11 @@
   margin-left: 2px;
 }
 
+.track-info > span > span > svg {
+  width: 1em;
+  height: 1em;
+}
+
 /* Carousel Arrow */
 .carousel-arrow {
   display: flex;
@@ -145,7 +150,7 @@
 /* Responsive Media Query */
 @media screen and (min-width: 1200px) {
   .carousel-container {
-    height: auto;
+    height: 300px;
   }
 
   .carousel {
@@ -198,6 +203,10 @@
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
+  .carousel-container {
+    height: 370px;
+  }
+
   .carousel {
     padding: 0 40px;
   }
@@ -219,12 +228,12 @@
 
 @media screen and (max-width: 991px) {
   .carousel-wrapper {
-    height: 373px;
+    height: 390px;
   }
 }
 
 @media screen and (max-width: 724px) {
   .carousel-wrapper {
-    height: 290px;
+    height: 360px;
   }
 }
